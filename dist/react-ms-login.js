@@ -126,7 +126,7 @@ var ReactLoginMS = function (_React$Component) {
         key: "getOAuthUrl",
         value: function getOAuthUrl() {
             var scopes = encodeURIComponent(this.state.scopes.join(" "));
-            var oauthUri = this.oauthUrl + "?client_id=" + this.state.clientId + "&response_type=" + this.state.responseType + ("&redirect_uri=" + encodeURIComponent(this.state.redirectUri)) + ("&scope=" + scopes + "&response_mode=fragment");
+            var oauthUri = this.oauthUrl + "?client_id=" + this.state.clientId + "&response_type=" + this.state.responseType + ("&redirect_uri=" + encodeURIComponent(this.state.redirectUri)) + ("&scope=" + scopes + "&response_mode=query");
 
             return oauthUri;
         }
