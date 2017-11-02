@@ -26,7 +26,7 @@ class ReactLoginMS extends React.Component {
         let scopes = encodeURIComponent(this.state.scopes.join(" "));
         let oauthUri = `${this.oauthUrl}?client_id=${this.state.clientId}&response_type=${this.state.responseType}` +
             `&redirect_uri=${encodeURIComponent(this.state.redirectUri)}` +
-            `&scope=${scopes}&response_mode=fragment`;
+            `&scope=${scopes}&response_mode=fragment&state=1234&nonce=${ ( new Date() ).getTime() }`;
 
         return oauthUri;
     }
