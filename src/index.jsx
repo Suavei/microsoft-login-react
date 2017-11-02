@@ -23,7 +23,8 @@ class ReactLoginMS extends React.Component {
     }
 
     getOAuthUrl() {
-        let scopes = encodeURIComponent(this.state.scopes.join(" "));
+        /* let scopes = encodeURIComponent(this.state.scopes.join(" ")); */
+        let scopes = 'iopenid%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read';
         let oauthUri = `${this.oauthUrl}?client_id=${this.state.clientId}&response_type=${this.state.responseType}` +
             `&redirect_uri=${encodeURIComponent(this.state.redirectUri)}` +
             `&scope=${scopes}&response_mode=fragment&state=1234&nonce=${ ( new Date() ).getTime() }`;
